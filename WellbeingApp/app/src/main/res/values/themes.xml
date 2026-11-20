@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base Application Theme using Material3 DayNight NoActionBar -->
+    <style name="Theme.Wellbeing" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Brand Colors -->
+        <item name="colorPrimary">@color/primary_moss</item>
+        <item name="colorPrimaryVariant">@color/primary_forest</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        
+        <item name="colorSecondary">@color/accent_clay</item>
+        <item name="colorSecondaryVariant">@color/accent_terracotta</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+        
+        <item name="android:colorBackground">@color/bg_paper</item>
+        <item name="colorSurface">@color/bg_card</item>
+        <item name="colorOnSurface">@color/text_ink</item>
+        
+        <!-- Status Bar -->
+        <item name="android:statusBarColor">@color/bg_paper</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:navigationBarColor">@color/bg_card</item>
+    </style>
+
+    <style name="Theme.Wellbeing.Dark" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/primary_mint</item>
+        <item name="android:colorBackground">@color/primary_forest</item>
+        <item name="colorSurface">#24382D</item>
+        <item name="android:statusBarColor">@color/primary_forest</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+    </style>
+</resources>

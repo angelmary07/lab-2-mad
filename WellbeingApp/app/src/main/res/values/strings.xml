@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MindWell Companion</string>
+    <string name="app_tagline">Your Holistic Mental Health &amp; Daily Wellbeing Partner</string>
+    <string name="app_assignment_title">MindWell Metric &amp; Dynamic Calculator</string>
+    <string name="app_assignment_subtitle">Android Lab Assignment: Dynamic Numerical Processing</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_mood_journal">Mood &amp; Journal</string>
+    <string name="nav_sleep_relax">Sleep &amp; Relax</string>
+    <string name="nav_schedule_assistant">Schedule &amp; Habits</string>
+    <string name="nav_calculator">Calculator</string>
+
+    <!-- Calculator Strings -->
+    <string name="calc_title">Dynamic Numerical Processor</string>
+    <string name="calc_prompt">Enter two numerical values below to compute results dynamically:</string>
+    <string name="calc_hint_num1">Enter First Numerical Value</string>
+    <string name="calc_hint_num2">Enter Second Numerical Value</string>
+    <string name="calc_btn_add">+ Addition</string>
+    <string name="calc_btn_sub">− Subtraction</string>
+    <string name="calc_btn_mul">× Multiplication</string>
+    <string name="calc_btn_div">÷ Division</string>
+    <string name="calc_btn_clear">Clear All Entered Values</string>
+    <string name="calc_result_default">Calculated result will appear dynamically here</string>
+    <string name="calc_error_empty">Please enter both numerical values!</string>
+    <string name="calc_error_div_zero">Error: Division by zero is undefined!</string>
+    <string name="calc_error_invalid_number">Please enter valid numeric values!</string>
+
+    <!-- Wellbeing Strings -->
+    <string name="sos_helpline_title">24/7 Mental Health Emergency Helplines</string>
+    <string name="sos_disclaimer">If you or someone you know is in distress, free and confidential support is available 24/7.</string>
+</resources>

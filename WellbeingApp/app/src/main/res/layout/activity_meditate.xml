@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/moss_dark"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tvBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|start"
+        android:fontFamily="sans-serif-medium"
+        android:padding="4dp"
+        android:text="Back"
+        android:textColor="#E0A98F"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/tvTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:fontFamily="sans-serif-medium"
+        android:padding="4dp"
+        android:text="00:00"
+        android:textColor="#B9CDBF"
+        android:textSize="14sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginTop="56dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:contentDescription="Leaf"
+            android:src="@drawable/ic_leaf"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:fontFamily="serif"
+            android:text="Breathe"
+            android:textColor="#FFFFFF"
+            android:textSize="32sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Four seconds in, four seconds out."
+            android:textColor="#B9CDBF"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="290dp"
+        android:layout_height="290dp"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_ring"/>
+
+    <TextView
+        android:id="@+id/tvCircle"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_breath"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:text="Ready"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"/>
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="220dp"
+        android:layout_height="54dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/btn_clay"
+        android:fontFamily="sans-serif-medium"
+        android:stateListAnimator="@null"
+        android:text="Begin"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"/>
+</FrameLayout>

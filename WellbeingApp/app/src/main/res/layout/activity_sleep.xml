@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/paper"
+    android:clipToPadding="false"
+    android:fillViewport="true"
+    android:padding="24dp">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1">
+
+        <TableRow>
+            <TextView
+                android:id="@+id/tvBack"
+                android:layout_span="3"
+                android:fontFamily="sans-serif-medium"
+                android:padding="4dp"
+                android:text="Back"
+                android:textColor="@color/clay"
+                android:textSize="14sp"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_marginBottom="22dp"
+                android:layout_marginTop="14dp"
+                android:layout_span="3"
+                android:fontFamily="serif"
+                android:text="How did you sleep?"
+                android:textColor="@color/ink"
+                android:textSize="30sp"/>
+        </TableRow>
+
+            <TableRow
+                android:layout_marginBottom="12dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bedtime"
+                    android:textColor="@color/ink"
+                    android:textSize="15sp"/>
+
+                <EditText
+                    android:id="@+id/etBed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:background="@drawable/bg_field"
+                    android:hint="23:30"
+                    android:importantForAutofill="no"
+                    android:inputType="time"
+                    android:textColor="@color/ink"
+                    android:textColorHint="#A8A092"
+                    android:textSize="16sp"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginBottom="12dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wake up"
+                    android:textColor="@color/ink"
+                    android:textSize="15sp"/>
+
+                <EditText
+                    android:id="@+id/etWake"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:background="@drawable/bg_field"
+                    android:hint="06:45"
+                    android:importantForAutofill="no"
+                    android:inputType="time"
+                    android:textColor="@color/ink"
+                    android:textColorHint="#A8A092"
+                    android:textSize="16sp"/>
+            </TableRow>
+
+        <TableRow android:layout_marginBottom="14dp">
+            <Button
+                android:id="@+id/btnCalc"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_span="3"
+                android:background="@drawable/btn_moss"
+                android:fontFamily="sans-serif-medium"
+                android:stateListAnimator="@null"
+                android:text="Calculate"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"/>
+        </TableRow>
+
+        <TableRow android:layout_marginBottom="26dp">
+            <TextView
+                android:id="@+id/tvResult"
+                android:layout_span="3"
+                android:text="Enter times in 24 hour format."
+                android:textColor="@color/muted"
+                android:textSize="15sp"/>
+        </TableRow>
+
+        <TableRow android:layout_marginBottom="14dp">
+            <TextView
+                android:layout_span="3"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="0.12"
+                android:text="THIS WEEK"
+                android:textColor="@color/muted"
+                android:textSize="11sp"/>
+        </TableRow>
+
+            <TableRow
+                android:layout_marginBottom="14dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="56dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="Mon"
+                    android:textColor="@color/ink"
+                    android:textSize="14sp"/>
+
+                <ProgressBar
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:max="10"
+                    android:maxHeight="10dp"
+                    android:minHeight="10dp"
+                    android:progress="7"
+                    android:progressDrawable="@drawable/progress_moss"/>
+
+                <TextView
+                    android:layout_width="44dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:gravity="end"
+                    android:text="7h"
+                    android:textColor="@color/ink"
+                    android:textSize="14sp"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginBottom="14dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="56dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="Tue"
+                    android:textColor="@color/ink"
+                    android:textSize="14sp"/>
+
+                <ProgressBar
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:max="10"
+                    android:maxHeight="10dp"
+                    android:minHeight="10dp"
+                    android:progress="6"
+                    android:progressDrawable="@drawable/progress_moss"/>
+
+                <TextView
+                    android:layout_width="44dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:gravity="end"
+                    android:text="6h"
+                    android:textColor="@color/ink"
+                    android:textSize="14sp"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginBottom="14dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="56dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="Wed"
+                    android:textColor="@color/ink"
+                    android:textSize="14sp"/>
+
+                <ProgressBar
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:max="10"
+                    android:maxHeight="10dp"
+                    android:minHeight="10dp"
+                    android:progress="8"
+                    android:progressDrawable="@drawable/progress_moss"/>
+
+                <TextView
+                    android:layout_width="44dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:gravity="end"
+                    android:text="8h"
+                    android:textColor="@color/ink"
+                    android:textSize="14sp"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginBottom="14dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="56dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="Thu"
+                    android:textColor="@color/ink"
+                    android:textSize="14sp"/>
+
+                <ProgressBar
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:max="10"
+                    android:maxHeight="10dp"
+                    android:minHeight="10dp"
+                    android:progress="5"
+                    android:progressDrawable="@drawable/progress_moss"/>
+
+                <TextView
+                    android:layout_width="44dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:gravity="end"
+                    android:text="5h"
+                    android:textColor="@color/ink"
+                    android:textSize="14sp"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginBottom="14dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="56dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="Fri"
+                    android:textColor="@color/ink"
+                    android:textSize="14sp"/>
+
+                <ProgressBar
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:max="10"
+                    android:maxHeight="10dp"
+                    android:minHeight="10dp"
+                    android:progress="7"
+                    android:progressDrawable="@drawable/progress_moss"/>
+
+                <TextView
+                    android:layout_width="44dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:gravity="end"
+                    android:text="7h"
+                    android:textColor="@color/ink"
+                    android:textSize="14sp"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginBottom="14dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="56dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="Sat"
+                    android:textColor="@color/ink"
+                    android:textSize="14sp"/>
+
+                <ProgressBar
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:max="10"
+                    android:maxHeight="10dp"
+                    android:minHeight="10dp"
+                    android:progress="9"
+                    android:progressDrawable="@drawable/progress_moss"/>
+
+                <TextView
+                    android:layout_width="44dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:gravity="end"
+                    android:text="9h"
+                    android:textColor="@color/ink"
+                    android:textSize="14sp"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginBottom="14dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="56dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Today"
+                    android:textColor="@color/clay"
+                    android:textSize="14sp"/>
+
+                <ProgressBar android:id="@+id/pbToday"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:max="10"
+                    android:maxHeight="10dp"
+                    android:minHeight="10dp"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/progress_clay"/>
+
+                <TextView android:id="@+id/tvTodayHrs"
+                    android:layout_width="44dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="end"
+                    android:text="0h"
+                    android:textColor="@color/clay"
+                    android:textSize="14sp"/>
+            </TableRow>
+
+    </TableLayout>
+</ScrollView>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand Primary - Serene Forest Moss -->
+    <color name="primary_forest">#1E3A2F</color>
+    <color name="primary_moss">#2D5A43</color>
+    <color name="primary_sage">#52796F</color>
+    <color name="primary_mint">#84A98C</color>
+    <color name="primary_light">#CAD2C5</color>
+    <color name="primary_soft">#E8F0EC</color>
+
+    <!-- Warm Terracotta & Clay Accents -->
+    <color name="accent_clay">#C25E34</color>
+    <color name="accent_terracotta">#D97746</color>
+    <color name="accent_warm_sand">#E9DCC9</color>
+    <color name="accent_peach">#FDEEE9</color>
+
+    <!-- Neutrals & Surfaces -->
+    <color name="bg_paper">#FAF7F2</color>
+    <color name="bg_card">#FFFFFF</color>
+    <color name="bg_card_darker">#F4EFE6</color>
+    <color name="text_ink">#1F2421</color>
+    <color name="text_secondary">#59625D</color>
+    <color name="text_muted">#8D968F</color>
+    <color name="divider_line">#E2DDD2</color>
+
+    <!-- Mood Palette -->
+    <color name="mood_radiant">#10B981</color>
+    <color name="mood_happy">#3B82F6</color>
+    <color name="mood_calm">#8B5CF6</color>
+    <color name="mood_neutral">#64748B</color>
+    <color name="mood_sad">#F59E0B</color>
+    <color name="mood_stressed">#EF4444</color>
+
+    <!-- Academic Assignment Calculator Colors -->
+    <!-- Result Text Colors based on Operation -->
+    <color name="calc_op_add">#2E7D32</color>          <!-- Emerald Green for Addition -->
+    <color name="calc_op_subtract">#1565C0</color>     <!-- Ocean Blue for Subtraction -->
+    <color name="calc_op_multiply">#6A1B9A</color>     <!-- Royal Purple for Multiplication -->
+    <color name="calc_op_divide">#D84315</color>       <!-- Deep Orange for Division -->
+    <color name="calc_op_error">#C62828</color>        <!-- Crimson Red for Division by Zero / Errors -->
+    <color name="calc_btn_normal">#2D5A43</color>
+    <color name="calc_btn_clicked">#FFB703</color>
+    <color name="calc_clear_bg">#475569</color>
+
+    <!-- Status & Alerts -->
+    <color name="sos_red">#DC2626</color>
+    <color name="sos_red_light">#FEE2E2</color>
+    <color name="success_green">#16A34A</color>
+    <color name="water_blue">#0284C7</color>
+    <color name="water_blue_light">#E0F2FE</color>
+
+    <!-- Backward Compatibility -->
+    <color name="paper">#FAF7F2</color>
+    <color name="ink">#1F2421</color>
+    <color name="moss">#2D5A43</color>
+    <color name="moss_dark">#1E3A2F</color>
+    <color name="clay">#C25E34</color>
+    <color name="clay_dark">#A9552F</color>
+    <color name="sand">#E9DCC9</color>
+    <color name="sand_dark">#DDD2BF</color>
+    <color name="line">#E2DDD2</color>
+    <color name="muted">#8D968F</color>
+    <color name="field">#FFFFFF</color>
+</resources>

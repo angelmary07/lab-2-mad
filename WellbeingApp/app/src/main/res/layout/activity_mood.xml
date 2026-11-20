@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/paper"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tvBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:padding="4dp"
+        android:text="Back"
+        android:textColor="@color/clay"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvBack"
+        android:layout_marginTop="14dp"
+        android:fontFamily="serif"
+        android:text="How are you\nfeeling right now?"
+        android:textColor="@color/ink"
+        android:textSize="30sp"/>
+
+    <RadioGroup
+        android:id="@+id/rgMood"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginTop="22dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbGreat"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_mood"
+            android:button="@null"
+            android:gravity="center"
+            android:text="Great"
+            android:textColor="@color/mood_text"
+            android:textSize="13sp"/>
+
+        <RadioButton
+            android:id="@+id/rbGood"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_mood"
+            android:button="@null"
+            android:gravity="center"
+            android:text="Good"
+            android:textColor="@color/mood_text"
+            android:textSize="13sp"/>
+
+        <RadioButton
+            android:id="@+id/rbOkay"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_mood"
+            android:button="@null"
+            android:gravity="center"
+            android:text="Okay"
+            android:textColor="@color/mood_text"
+            android:textSize="13sp"/>
+
+        <RadioButton
+            android:id="@+id/rbLow"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_mood"
+            android:button="@null"
+            android:gravity="center"
+            android:text="Low"
+            android:textColor="@color/mood_text"
+            android:textSize="13sp"/>
+
+        <RadioButton
+            android:id="@+id/rbRough"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_mood"
+            android:button="@null"
+            android:gravity="center"
+            android:text="Rough"
+            android:textColor="@color/mood_text"
+            android:textSize="13sp"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvHelped"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rgMood"
+        android:layout_marginTop="24dp"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="0.12"
+        android:text="WHAT HELPED TODAY"
+        android:textColor="@color/muted"
+        android:textSize="11sp"/>
+
+    <CheckBox
+        android:id="@+id/cbSleep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvHelped"
+        android:buttonTint="@color/moss"
+        android:text="Slept well"
+        android:textColor="@color/ink"
+        android:textSize="15sp"/>
+
+    <CheckBox
+        android:id="@+id/cbExercise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cbSleep"
+        android:buttonTint="@color/moss"
+        android:text="Moved my body"
+        android:textColor="@color/ink"
+        android:textSize="15sp"/>
+
+    <CheckBox
+        android:id="@+id/cbPeople"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cbExercise"
+        android:buttonTint="@color/moss"
+        android:text="Time with people I like"
+        android:textColor="@color/ink"
+        android:textSize="15sp"/>
+
+    <EditText
+        android:id="@+id/etNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnSave"
+        android:layout_below="@id/cbPeople"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/bg_field"
+        android:gravity="top"
+        android:hint="A few lines about your day"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine|textCapSentences"
+        android:minHeight="90dp"
+        android:textColor="@color/ink"
+        android:textColorHint="#A8A092"
+        android:textSize="15sp"/>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/btn_moss"
+        android:fontFamily="sans-serif-medium"
+        android:stateListAnimator="@null"
+        android:text="Save entry"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"/>
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@drawable/ic_nav_home"
+        android:title="Home" />
+    <item
+        android:id="@+id/menu_mood_journal"
+        android:icon="@drawable/ic_nav_mood"
+        android:title="Mood &amp; Log" />
+    <item
+        android:id="@+id/menu_sleep_relax"
+        android:icon="@drawable/ic_nav_sleep"
+        android:title="Sleep &amp; Zen" />
+    <item
+        android:id="@+id/menu_schedule_assistant"
+        android:icon="@drawable/ic_nav_schedule"
+        android:title="Schedule" />
+    <item
+        android:id="@+id/menu_calculator"
+        android:icon="@drawable/ic_nav_calc"
+        android:title="Calculator" />
+</menu>
+

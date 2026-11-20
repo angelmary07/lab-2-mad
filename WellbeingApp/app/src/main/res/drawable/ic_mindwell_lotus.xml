@@ -1,0 +1,31 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Outer Aura Glow -->
+    <path
+        android:fillColor="#2640916C"
+        android:pathData="M24,4 C35.05,4 44,12.95 44,24 C44,35.05 35.05,44 24,44 C12.95,44 4,35.05 4,24 C4,12.95 12.95,4 24,4 Z"/>
+    <!-- Lotus Central Petal -->
+    <path
+        android:fillColor="#2D5A43"
+        android:pathData="M24,11 C26,17 28.5,23 28.5,28 C28.5,30.5 26.5,33 24,33 C21.5,33 19.5,30.5 19.5,28 C19.5,23 22,17 24,11 Z"/>
+    <!-- Lotus Left Petal -->
+    <path
+        android:fillColor="#52796F"
+        android:pathData="M24,20 C20,22 13,26 15,31 C16.5,34.5 21,33.5 24,31 C24,27 24,24 24,20 Z"/>
+    <!-- Lotus Right Petal -->
+    <path
+        android:fillColor="#52796F"
+        android:pathData="M24,20 C28,22 35,26 33,31 C31.5,34.5 27,33.5 24,31 C24,27 24,24 24,20 Z"/>
+    <!-- Lotus Base Leaf -->
+    <path
+        android:fillColor="#84A98C"
+        android:pathData="M12,35 C17,39 31,39 36,35 C32,37 16,37 12,35 Z"/>
+    <!-- Center Serenity Pearl -->
+    <path
+        android:fillColor="#D97746"
+        android:pathData="M24,25 A2.5,2.5 0 1,0 24.01,25 Z"/>
+</vector>
+
