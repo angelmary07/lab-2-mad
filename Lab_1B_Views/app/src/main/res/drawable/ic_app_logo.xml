@@ -1,0 +1,57 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Ambient Sky Glow Ring -->
+    <path
+        android:fillColor="#260284C7"
+        android:pathData="M54,6 A48,48 0 1,1 53.9,6 Z" />
+
+    <!-- Frosted Glass Rounded Shield -->
+    <path
+        android:fillColor="#E6FFFFFF"
+        android:strokeColor="#800284C7"
+        android:strokeWidth="1.5"
+        android:pathData="M24,28 Q54,16 84,28 L84,64 Q54,92 24,64 Z" />
+
+    <!-- 7 Views Graphical Synthesis Elements -->
+    <!-- Element 1: SeekBar Track & Thumb Arc -->
+    <path
+        android:strokeColor="#0284C7"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:pathData="M34,42 L74,42" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M58,42 A4.5,4.5 0 1,1 57.9,42 Z" />
+
+    <!-- Element 2: Radio Button Circular Nodes -->
+    <path
+        android:strokeColor="#6366F1"
+        android:strokeWidth="1.8"
+        android:pathData="M38,56 A5,5 0 1,1 37.9,56 Z" />
+    <path
+        android:fillColor="#6366F1"
+        android:pathData="M38,56 A2.5,2.5 0 1,1 37.9,56 Z" />
+
+    <!-- Element 3: CheckBox Checked Mark -->
+    <path
+        android:strokeColor="#10B981"
+        android:strokeWidth="2.2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M52,56 L55,59 L62,52" />
+
+    <!-- Element 4: Switch Pill Graphic -->
+    <path
+        android:fillColor="#330284C7"
+        android:strokeColor="#0284C7"
+        android:strokeWidth="1.2"
+        android:pathData="M40,68 L68,68 A4,4 0 0,1 68,76 L40,76 A4,4 0 0,1 40,68 Z" />
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M64,72 A3.2,3.2 0 1,1 63.9,72 Z" />
+
+</vector>

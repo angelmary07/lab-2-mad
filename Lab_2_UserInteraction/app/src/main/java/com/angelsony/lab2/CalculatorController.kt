@@ -108,6 +108,16 @@ class CalculatorController(
         tvResult.text = "Result: $formattedResult"
         tvResult.setTextColor(resultColor)
 
+        // Result Crunch Bounce Animation
+        tvResult.animate()
+            .scaleX(1.10f)
+            .scaleY(1.10f)
+            .setDuration(120)
+            .withEndAction {
+                tvResult.animate().scaleX(1f).scaleY(1f).setDuration(120).start()
+            }
+            .start()
+
         tvOperationBadge?.apply {
             text = operationName.uppercase()
             setBackgroundColor(resultColor)
@@ -166,6 +176,16 @@ class CalculatorController(
 
         tvResult.text = "Result: $formattedResult"
         tvResult.setTextColor(colorDivision)
+
+        // Result Crunch Bounce Animation
+        tvResult.animate()
+            .scaleX(1.10f)
+            .scaleY(1.10f)
+            .setDuration(120)
+            .withEndAction {
+                tvResult.animate().scaleX(1f).scaleY(1f).setDuration(120).start()
+            }
+            .start()
 
         tvOperationBadge?.apply {
             text = "DIVISION"
@@ -280,3 +300,4 @@ class CalculatorController(
         }
     }
 }
+

@@ -59,3 +59,4 @@ class FrameLayoutActivity : AppCompatActivity() {
         animator?.cancel()
     }
 }
+

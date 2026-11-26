@@ -1,0 +1,44 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Ambient Emerald Glow Halo -->
+    <path
+        android:fillColor="#262D5A43"
+        android:pathData="M54,6 A48,48 0 1,1 53.9,6 Z" />
+
+    <!-- Frosted Glass Rounded Shield -->
+    <path
+        android:fillColor="#E6FFFFFF"
+        android:strokeColor="#802D5A43"
+        android:strokeWidth="1.5"
+        android:pathData="M24,28 Q54,16 84,28 L84,64 Q54,92 24,64 Z" />
+
+    <!-- Sacred Blooming Lotus Central Petal -->
+    <path
+        android:fillColor="#2D5A43"
+        android:pathData="M54,34 C50,44 44,52 54,64 C64,52 58,44 54,34 Z" />
+
+    <!-- Lotus Left Petal (Sage Tint) -->
+    <path
+        android:fillColor="#52796F"
+        android:pathData="M54,42 C45,46 36,54 44,64 C48,56 50,50 54,42 Z" />
+
+    <!-- Lotus Right Petal (Sage Tint) -->
+    <path
+        android:fillColor="#52796F"
+        android:pathData="M54,42 C63,46 72,54 64,64 C60,56 58,50 54,42 Z" />
+
+    <!-- Terracotta Base Foundation -->
+    <path
+        android:fillColor="#D97746"
+        android:pathData="M38,64 Q54,72 70,64 Q54,68 38,64 Z" />
+
+    <!-- Crown Spark (Amber) -->
+    <path
+        android:fillColor="#FFB703"
+        android:pathData="M54,30 A2.5,2.5 0 1,1 53.9,30 Z" />
+
+</vector>

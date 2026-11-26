@@ -1,12 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primary_ocean">#1565C0</color>
-    <color name="primary_sky">#0284C7</color>
+    <!-- Brand Ocean & Sky Palette -->
+    <color name="primary_ocean">#0284C7</color>
+    <color name="primary_sky">#38BDF8</color>
+    <color name="primary_indigo">#6366F1</color>
     <color name="accent_amber">#F59E0B</color>
-    <color name="accent_teal">#0D9488</color>
+    <color name="accent_emerald">#10B981</color>
+
+    <!-- Glassmorphic Translucent Tints -->
+    <color name="glass_surface">#EBF0F9FF</color>       <!-- 92% frosted sky white -->
+    <color name="glass_surface_subtle">#CCFFFFFF</color><!-- 80% frosted white -->
+    <color name="glass_surface_accent">#1F0284C7</color><!-- 12% tinted ocean blue -->
+    <color name="glass_stroke">#80FFFFFF</color>        <!-- 50% frosted border -->
+    <color name="glass_stroke_subtle">#33CBD5E1</color> <!-- 20% slate border -->
+    <color name="glass_glow">#4038BDF8</color>          <!-- Sky glow -->
+
+    <!-- Ambient Aurora Sky Background Stops -->
+    <color name="aurora_bg_start">#F0F9FF</color>       <!-- Alice sky -->
+    <color name="aurora_bg_center">#FAF7F2</color>      <!-- Calm cream -->
+    <color name="aurora_bg_end">#EEF2FF</color>         <!-- Soft indigo tint -->
+
+    <!-- Base UI Colors -->
     <color name="bg_paper">#F8FAFC</color>
     <color name="bg_card">#FFFFFF</color>
     <color name="text_slate">#0F172A</color>
+    <color name="text_secondary">#475569</color>
     <color name="text_muted">#64748B</color>
     <color name="divider_line">#E2E8F0</color>
 </resources>

@@ -1,0 +1,63 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Ambient Golden Amber Radiance Ring -->
+    <path
+        android:fillColor="#26FFB703"
+        android:pathData="M54,6 A48,48 0 1,1 53.9,6 Z" />
+
+    <!-- Frosted Glass Crystal Shield Base -->
+    <path
+        android:fillColor="#E6FFFFFF"
+        android:strokeColor="#802D5A43"
+        android:strokeWidth="1.5"
+        android:pathData="M24,28 Q54,16 84,28 L84,64 Q54,92 24,64 Z" />
+
+    <!-- Calculator Display Screen Strip -->
+    <path
+        android:fillColor="#1F2D5A43"
+        android:strokeColor="#2D5A43"
+        android:strokeWidth="1.2"
+        android:pathData="M34,32 L74,32 A4,4 0 0,1 78,36 L78,44 A4,4 0 0,1 74,48 L34,48 A4,4 0 0,1 30,44 L30,36 A4,4 0 0,1 34,32 Z" />
+
+    <!-- Glowing Math Operator Nodes -->
+    <!-- Top-Left: + (Addition - Green) -->
+    <path
+        android:strokeColor="#2E7D32"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:pathData="M39,56 L47,56 M43,52 L43,60" />
+
+    <!-- Top-Right: − (Subtraction - Blue) -->
+    <path
+        android:strokeColor="#1565C0"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:pathData="M61,56 L69,56" />
+
+    <!-- Bottom-Left: × (Multiplication - Purple) -->
+    <path
+        android:strokeColor="#6A1B9A"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:pathData="M40,68 L46,74 M46,68 L40,74" />
+
+    <!-- Bottom-Right: ÷ (Division - Orange) -->
+    <path
+        android:strokeColor="#D84315"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:pathData="M61,71 L69,71" />
+    <path
+        android:fillColor="#D84315"
+        android:pathData="M65,67 A1.5,1.5 0 1,1 64.9,67 Z M65,75 A1.5,1.5 0 1,1 64.9,75 Z" />
+
+    <!-- Central Energy Core Spark (Golden Amber) -->
+    <path
+        android:fillColor="#FFB703"
+        android:pathData="M54,61 L55.5,63.5 L58,65 L55.5,66.5 L54,69 L52.5,66.5 L50,65 L52.5,63.5 Z" />
+
+</vector>

@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Lab1A_Layouts"
 include(":app")
+

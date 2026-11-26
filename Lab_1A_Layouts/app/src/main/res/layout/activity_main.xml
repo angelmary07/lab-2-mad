@@ -1,57 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollLayoutsHub"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_paper"
+    android:background="@drawable/bg_mesh_gradient"
     android:fillViewport="true">
 
     <LinearLayout
+        android:id="@+id/llCardsContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="20dp">
+        android:padding="20dp"
+        android:paddingBottom="40dp">
+
+        <!-- Glassmorphic Header Card with Official App Logo -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/headerCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/glass_surface"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="3dp"
+            app:strokeColor="@color/glass_stroke"
+            app:strokeWidth="1.5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="18dp">
+
+                <!-- Glowing App Vector Logo -->
+                <ImageView
+                    android:id="@+id/ivHeaderLogo"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:contentDescription="MindWell Layouts Emblem"
+                    android:src="@drawable/ic_app_logo" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_glass_badge"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="3dp"
+                        android:text="LAB 1A • 5 ANDROID LAYOUTS"
+                        android:textColor="@color/primary_moss"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="serif"
+                        android:text="MindWell Layouts"
+                        android:textColor="@color/text_ink"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Healthcare Domain • Animated Showcase"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/primary_forest"
-            android:paddingHorizontal="10dp"
-            android:paddingVertical="4dp"
-            android:text="LAB EXERCISE 1A • 5 LAYOUTS"
-            android:textColor="#FFFFFF"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="4dp"
+            android:text="EXPLORE IMPLEMENTED LAYOUTS"
+            android:textColor="@color/primary_sage"
             android:textSize="11sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="serif"
-            android:text="Android Layout Types Demo"
-            android:textColor="@color/text_ink"
-            android:textSize="22sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="Domain: MindWell Mental Health &amp; Clinic Management. Tap any card below to launch and evaluate that specific Android layout."
-            android:textColor="@color/text_secondary"
-            android:textSize="13sp" />
+            android:textStyle="bold"
+            android:letterSpacing="0.08" />
 
         <!-- Card 1: ConstraintLayout -->
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cardConstraint"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            app:cardBackgroundColor="@color/bg_card"
-            app:cardCornerRadius="16dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/glass_surface"
+            app:cardCornerRadius="22dp"
             app:cardElevation="2dp"
-            app:strokeColor="@color/divider_line"
-            app:strokeWidth="1dp">
+            app:strokeColor="@color/glass_stroke"
+            app:strokeWidth="1.5dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -62,7 +111,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1. ConstraintLayout"
+                    android:text="1. ConstraintLayout 📐"
                     android:textColor="@color/primary_moss"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -71,7 +120,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="Screen: Patient Registration &amp; Authentication. Demonstrates relative anchoring, bias, guidelines, and chain constraints."
+                    android:text="Screen: Patient Registration &amp; Intake. Anchors, chains, and bias guidelines."
                     android:textColor="@color/text_secondary"
                     android:textSize="12sp" />
 
@@ -79,10 +128,11 @@
                     android:id="@+id/btnOpenConstraint"
                     android:layout_width="match_parent"
                     android:layout_height="44dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="12dp"
                     android:backgroundTint="@color/primary_moss"
-                    android:text="Open ConstraintLayout Demo →"
-                    android:textSize="13sp" />
+                    android:text="Launch ConstraintLayout Demo →"
+                    android:textSize="12sp"
+                    app:cornerRadius="14dp" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
@@ -92,11 +142,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            app:cardBackgroundColor="@color/bg_card"
-            app:cardCornerRadius="16dp"
+            app:cardBackgroundColor="@color/glass_surface"
+            app:cardCornerRadius="22dp"
             app:cardElevation="2dp"
-            app:strokeColor="@color/divider_line"
-            app:strokeWidth="1dp">
+            app:strokeColor="@color/glass_stroke"
+            app:strokeWidth="1.5dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -107,7 +157,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="2. LinearLayout"
+                    android:text="2. LinearLayout 📊"
                     android:textColor="@color/primary_moss"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -116,7 +166,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="Screen: Health Vitals &amp; Wellbeing Dashboard. Demonstrates nested vertical/horizontal orientation with layout weights."
+                    android:text="Screen: Health Vitals &amp; Wellbeing Dashboard. Nested linear weights (layout_weight=&quot;1&quot;)."
                     android:textColor="@color/text_secondary"
                     android:textSize="12sp" />
 
@@ -124,10 +174,11 @@
                     android:id="@+id/btnOpenLinear"
                     android:layout_width="match_parent"
                     android:layout_height="44dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="12dp"
                     android:backgroundTint="@color/primary_moss"
-                    android:text="Open LinearLayout Demo →"
-                    android:textSize="13sp" />
+                    android:text="Launch LinearLayout Demo →"
+                    android:textSize="12sp"
+                    app:cornerRadius="14dp" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
@@ -137,11 +188,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            app:cardBackgroundColor="@color/bg_card"
-            app:cardCornerRadius="16dp"
+            app:cardBackgroundColor="@color/glass_surface"
+            app:cardCornerRadius="22dp"
             app:cardElevation="2dp"
-            app:strokeColor="@color/divider_line"
-            app:strokeWidth="1dp">
+            app:strokeColor="@color/glass_stroke"
+            app:strokeWidth="1.5dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -152,7 +203,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="3. RelativeLayout"
+                    android:text="3. RelativeLayout 🔄"
                     android:textColor="@color/accent_clay"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -161,7 +212,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="Screen: Daily Mood &amp; Stress Assessment. Demonstrates layout_below, layout_alignParentBottom, and sibling-relative positioning."
+                    android:text="Screen: Daily Mood Assessment. Positioned with layout_toRightOf, layout_below, alignParentBottom."
                     android:textColor="@color/text_secondary"
                     android:textSize="12sp" />
 
@@ -169,10 +220,11 @@
                     android:id="@+id/btnOpenRelative"
                     android:layout_width="match_parent"
                     android:layout_height="44dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="12dp"
                     android:backgroundTint="@color/accent_clay"
-                    android:text="Open RelativeLayout Demo →"
-                    android:textSize="13sp" />
+                    android:text="Launch RelativeLayout Demo →"
+                    android:textSize="12sp"
+                    app:cornerRadius="14dp" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
@@ -182,11 +234,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            app:cardBackgroundColor="@color/bg_card"
-            app:cardCornerRadius="16dp"
+            app:cardBackgroundColor="@color/glass_surface"
+            app:cardCornerRadius="22dp"
             app:cardElevation="2dp"
-            app:strokeColor="@color/divider_line"
-            app:strokeWidth="1dp">
+            app:strokeColor="@color/glass_stroke"
+            app:strokeWidth="1.5dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -197,7 +249,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="4. TableLayout"
+                    android:text="4. TableLayout 📅"
                     android:textColor="@color/primary_moss"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -206,7 +258,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="Screen: Weekly Sleep Duration &amp; Vitals Matrix. Demonstrates TableRows, column stretch, cells, and calculation fields."
+                    android:text="Screen: Weekly Sleep Vitals Matrix. Structured with TableRows, headers, and duration formulas."
                     android:textColor="@color/text_secondary"
                     android:textSize="12sp" />
 
@@ -214,10 +266,11 @@
                     android:id="@+id/btnOpenTable"
                     android:layout_width="match_parent"
                     android:layout_height="44dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="12dp"
                     android:backgroundTint="@color/primary_moss"
-                    android:text="Open TableLayout Demo →"
-                    android:textSize="13sp" />
+                    android:text="Launch TableLayout Demo →"
+                    android:textSize="12sp"
+                    app:cornerRadius="14dp" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
@@ -227,11 +280,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            app:cardBackgroundColor="@color/bg_card"
-            app:cardCornerRadius="16dp"
+            app:cardBackgroundColor="@color/glass_surface"
+            app:cardCornerRadius="22dp"
             app:cardElevation="2dp"
-            app:strokeColor="@color/divider_line"
-            app:strokeWidth="1dp">
+            app:strokeColor="@color/glass_stroke"
+            app:strokeWidth="1.5dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -242,7 +295,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="5. FrameLayout"
+                    android:text="5. FrameLayout 🧘"
                     android:textColor="@color/accent_terracotta"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -251,7 +304,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="Screen: Zen Meditation &amp; Guided Breathing. Demonstrates stacked view layers, layout_gravity centers, and animated overlays."
+                    android:text="Screen: Zen Meditation Room. Stacked visual Z-layers, center gravity, and pulsing halo."
                     android:textColor="@color/text_secondary"
                     android:textSize="12sp" />
 
@@ -259,10 +312,11 @@
                     android:id="@+id/btnOpenFrame"
                     android:layout_width="match_parent"
                     android:layout_height="44dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="12dp"
                     android:backgroundTint="@color/accent_terracotta"
-                    android:text="Open FrameLayout Demo →"
-                    android:textSize="13sp" />
+                    android:text="Launch FrameLayout Demo →"
+                    android:textSize="12sp"
+                    app:cornerRadius="14dp" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 

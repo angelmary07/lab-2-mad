@@ -4,75 +4,94 @@
     android:id="@+id/scrollCalculator"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_paper"
+    android:background="@drawable/bg_mesh_gradient"
     android:fillViewport="true">
 
     <LinearLayout
+        android:id="@+id/llCalculatorContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="20dp">
+        android:padding="20dp"
+        android:paddingBottom="40dp">
 
-        <!-- Title Card -->
+        <!-- Glassmorphic Header Card with Official Vector Logo -->
         <com.google.android.material.card.MaterialCardView
+            android:id="@+id/headerCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="@color/bg_card"
-            app:cardCornerRadius="18dp"
-            app:cardElevation="2dp"
-            app:strokeColor="@color/divider_line"
-            app:strokeWidth="1dp">
+            app:cardBackgroundColor="@color/glass_surface"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="3dp"
+            app:strokeColor="@color/glass_stroke"
+            app:strokeWidth="1.5dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
                 android:padding="18dp">
 
-                <TextView
-                    android:id="@+id/tvAssignmentBadge"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@color/primary_forest"
-                    android:paddingHorizontal="10dp"
-                    android:paddingVertical="4dp"
-                    android:text="LAB EXERCISE 2 • USER INTERACTION"
-                    android:textColor="#FFFFFF"
-                    android:textSize="10sp"
-                    android:textStyle="bold" />
+                <!-- Official Vector Logo -->
+                <ImageView
+                    android:id="@+id/ivHeaderLogo"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:contentDescription="Calculator Lab Emblem"
+                    android:src="@drawable/ic_app_logo" />
 
-                <!-- Required Component 1: TextView – Display the application title -->
-                <TextView
-                    android:id="@+id/tvAppTitle"
-                    android:layout_width="match_parent"
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="serif"
-                    android:text="Dynamic Numerical Processor &amp; Calculator"
-                    android:textColor="@color/primary_forest"
-                    android:textSize="22sp"
-                    android:textStyle="bold" />
+                    android:layout_marginStart="14dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="Accepts two numbers, validates inputs, performs arithmetic operations dynamically, and updates colors per operation."
-                    android:textColor="@color/text_secondary"
-                    android:textSize="12sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_glass_badge"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="3dp"
+                        android:text="LAB 2 • USER INTERACTION"
+                        android:textColor="@color/primary_moss"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <!-- Required Component 1: TextView – Display the application title -->
+                    <TextView
+                        android:id="@+id/tvAppTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="serif"
+                        android:text="Dynamic Processor"
+                        android:textColor="@color/text_ink"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Interactive Calculator &amp; Color Shifts"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="11sp" />
+                </LinearLayout>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <!-- Input Fields Card -->
+        <!-- Input Fields Card (Glassmorphic) -->
         <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardInputs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            app:cardBackgroundColor="@color/bg_card"
-            app:cardCornerRadius="18dp"
+            android:layout_marginTop="14dp"
+            app:cardBackgroundColor="@color/glass_surface"
+            app:cardCornerRadius="24dp"
             app:cardElevation="2dp"
-            app:strokeColor="@color/divider_line"
-            app:strokeWidth="1dp">
+            app:strokeColor="@color/glass_stroke"
+            app:strokeWidth="1.5dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -98,20 +117,21 @@
                     android:digits="0123456789.-"
                     android:hint="Enter first number (e.g. 25.5)"
                     android:inputType="numberDecimal|numberSigned"
-                    android:paddingHorizontal="12dp"
+                    android:paddingHorizontal="14dp"
                     android:textColor="@color/text_ink"
+                    android:textColorHint="@color/text_muted"
                     android:textSize="14sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="14dp"
                     android:text="Second Numerical Input (Value 2)"
                     android:textColor="@color/text_ink"
                     android:textSize="13sp"
                     android:textStyle="bold" />
 
-                <!-- Required Component 3: EditText – Accept second user input -->
+                <!-- Required Component 2: EditText – Accept user input -->
                 <EditText
                     android:id="@+id/etSecondValue"
                     android:layout_width="match_parent"
@@ -119,125 +139,160 @@
                     android:layout_marginTop="6dp"
                     android:background="@drawable/bg_edit"
                     android:digits="0123456789.-"
-                    android:hint="Enter second number (e.g. 5.0)"
+                    android:hint="Enter second number (e.g. 10.0)"
                     android:inputType="numberDecimal|numberSigned"
-                    android:paddingHorizontal="12dp"
+                    android:paddingHorizontal="14dp"
                     android:textColor="@color/text_ink"
+                    android:textColorHint="@color/text_muted"
                     android:textSize="14sp" />
 
-                <!-- Quick Presets -->
+                <!-- Wellbeing Presets Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnPresetSleep"
+                        style="@style/Widget.Material3.Button.TonalButton"
+                        android:layout_width="0dp"
+                        android:layout_height="38dp"
+                        android:layout_marginEnd="6dp"
+                        android:layout_weight="1"
+                        android:text="Preset: Sleep (8.0 - 6.5)"
+                        android:textSize="11sp"
+                        app:cornerRadius="12dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnPresetWater"
+                        style="@style/Widget.Material3.Button.TonalButton"
+                        android:layout_width="0dp"
+                        android:layout_height="38dp"
+                        android:layout_marginStart="6dp"
+                        android:layout_weight="1"
+                        android:text="Preset: Water (70 × 35)"
+                        android:textSize="11sp"
+                        app:cornerRadius="12dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Operations Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardOperations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            app:cardBackgroundColor="@color/glass_surface"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="2dp"
+            app:strokeColor="@color/glass_stroke"
+            app:strokeWidth="1.5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Mathematical Operation"
+                    android:textColor="@color/primary_moss"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <!-- 4 Operation Buttons Grid -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:orientation="horizontal">
 
-                    <Button
-                        android:id="@+id/btnPresetSleep"
-                        style="@style/Widget.Material3.Button.OutlinedButton"
+                    <!-- Button: Addition -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnAdd"
                         android:layout_width="0dp"
-                        android:layout_height="36dp"
+                        android:layout_height="52dp"
                         android:layout_marginEnd="4dp"
                         android:layout_weight="1"
-                        android:text="Sleep: 8.0 - 6.5"
-                        android:textSize="10sp" />
+                        android:backgroundTint="@color/primary_moss"
+                        android:text="+"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:cornerRadius="14dp" />
 
-                    <Button
-                        android:id="@+id/btnPresetWater"
-                        style="@style/Widget.Material3.Button.OutlinedButton"
+                    <!-- Button: Subtraction -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnSubtract"
                         android:layout_width="0dp"
-                        android:layout_height="36dp"
+                        android:layout_height="52dp"
+                        android:layout_marginHorizontal="4dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/primary_moss"
+                        android:text="−"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:cornerRadius="14dp" />
+
+                    <!-- Button: Multiplication -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnMultiply"
+                        android:layout_width="0dp"
+                        android:layout_height="52dp"
+                        android:layout_marginHorizontal="4dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/primary_moss"
+                        android:text="×"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:cornerRadius="14dp" />
+
+                    <!-- Button: Division -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnDivide"
+                        android:layout_width="0dp"
+                        android:layout_height="52dp"
                         android:layout_marginStart="4dp"
                         android:layout_weight="1"
-                        android:text="Water: 70 × 35"
-                        android:textSize="10sp" />
+                        android:backgroundTint="@color/primary_moss"
+                        android:text="÷"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:cornerRadius="14dp" />
                 </LinearLayout>
+
+                <!-- Required Component 5: Button – Clear all entered values -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnClear"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/calc_clear_bg"
+                    android:text="↺ Clear All Inputs &amp; Reset Result"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="14dp" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <!-- Operation Buttons -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:fontFamily="sans-serif-medium"
-            android:letterSpacing="0.05"
-            android:text="CHOOSE OPERATION TO PERFORM"
-            android:textColor="@color/primary_sage"
-            android:textSize="11sp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal">
-
-            <!-- Required: Button – Addition -->
-            <Button
-                android:id="@+id/btnAdd"
-                android:layout_width="0dp"
-                android:layout_height="52dp"
-                android:layout_marginEnd="6dp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/calc_btn_normal"
-                android:text="+ Addition"
-                android:textColor="#FFFFFF"
-                android:textSize="14sp" />
-
-            <!-- Required: Button – Subtraction -->
-            <Button
-                android:id="@+id/btnSubtract"
-                android:layout_width="0dp"
-                android:layout_height="52dp"
-                android:layout_marginStart="6dp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/calc_btn_normal"
-                android:text="− Subtraction"
-                android:textColor="#FFFFFF"
-                android:textSize="14sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal">
-
-            <!-- Required: Button – Multiplication -->
-            <Button
-                android:id="@+id/btnMultiply"
-                android:layout_width="0dp"
-                android:layout_height="52dp"
-                android:layout_marginEnd="6dp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/calc_btn_normal"
-                android:text="× Multiplication"
-                android:textColor="#FFFFFF"
-                android:textSize="14sp" />
-
-            <!-- Required: Button – Division -->
-            <Button
-                android:id="@+id/btnDivide"
-                android:layout_width="0dp"
-                android:layout_height="52dp"
-                android:layout_marginStart="6dp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/calc_btn_normal"
-                android:text="÷ Division"
-                android:textColor="#FFFFFF"
-                android:textSize="14sp" />
-        </LinearLayout>
-
-        <!-- Result Card -->
+        <!-- Dynamic Result Card -->
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cardResult"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            app:cardBackgroundColor="@color/bg_card"
-            app:cardCornerRadius="18dp"
+            android:layout_marginTop="14dp"
+            app:cardBackgroundColor="@color/glass_surface"
+            app:cardCornerRadius="24dp"
             app:cardElevation="3dp"
-            app:strokeColor="@color/divider_line"
+            app:strokeColor="@color/glass_stroke"
             app:strokeWidth="1.5dp">
 
             <LinearLayout
@@ -253,25 +308,26 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Dynamic Result Display"
+                        android:textColor="@color/text_ink"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <!-- Operation Badge -->
+                    <TextView
                         android:id="@+id/tvOperationBadge"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@color/calc_btn_normal"
+                        android:background="@drawable/bg_glass_badge"
                         android:paddingHorizontal="10dp"
                         android:paddingVertical="3dp"
                         android:text="READY"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/primary_moss"
                         android:textSize="10sp"
                         android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/tvColorIndicator"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:text="Color: Default"
-                        android:textColor="@color/text_muted"
-                        android:textSize="11sp" />
                 </LinearLayout>
 
                 <!-- Required Component 4: TextView – Display the result dynamically -->
@@ -280,34 +336,38 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
-                    android:fontFamily="sans-serif-medium"
+                    android:lineSpacingMultiplier="1.2"
                     android:text="Calculated result will appear dynamically here"
                     android:textColor="@color/text_ink"
-                    android:textSize="18sp"
+                    android:textSize="17sp"
                     android:textStyle="bold" />
 
-                <!-- Additional Challenge: Display the operation performed along with result -->
+                <!-- Challenge 4: Display operation performed along with result -->
                 <TextView
                     android:id="@+id/tvCalculationDetails"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginTop="6dp"
                     android:text="Select two values and click any operation (+, −, ×, ÷)"
                     android:textColor="@color/text_secondary"
                     android:textSize="12sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/divider_line" />
+
+                <TextView
+                    android:id="@+id/tvColorIndicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Dynamic Color: Default Ink (#1F2421)"
+                    android:textColor="@color/text_muted"
+                    android:textSize="11sp" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
-
-        <!-- Required Component 5: Button – Clear all entered values -->
-        <Button
-            android:id="@+id/btnClear"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="14dp"
-            android:backgroundTint="@color/calc_clear_bg"
-            android:text="Clear All Entered Values &amp; Result"
-            android:textColor="#FFFFFF"
-            android:textSize="13sp" />
 
     </LinearLayout>
 </ScrollView>

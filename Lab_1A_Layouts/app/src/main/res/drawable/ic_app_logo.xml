@@ -1,0 +1,58 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Ambient Glow Ring -->
+    <path
+        android:fillColor="#262D5A43"
+        android:pathData="M54,6 A48,48 0 1,1 53.9,6 Z" />
+
+    <!-- Frosted Glass Shield Base -->
+    <path
+        android:fillColor="#E6FFFFFF"
+        android:strokeColor="#802D5A43"
+        android:strokeWidth="1.5"
+        android:pathData="M24,28 Q54,16 84,28 L84,62 Q54,92 24,62 Z" />
+
+    <!-- 5 Overlapping Layout Geometry Planes (Representing the 5 Layouts) -->
+    <!-- Layer 1: Constraint Grid -->
+    <path
+        android:strokeColor="#52796F"
+        android:strokeWidth="1.2"
+        android:strokeDasharray="2,2"
+        android:pathData="M32,36 L76,36 M32,54 L76,54 M54,28 L54,74" />
+
+    <!-- Layer 2: Linear Columns -->
+    <path
+        android:fillColor="#332D5A43"
+        android:strokeColor="#2D5A43"
+        android:strokeWidth="1"
+        android:pathData="M34,42 L46,42 L46,66 L34,66 Z" />
+
+    <!-- Layer 3: Relative Anchor Box -->
+    <path
+        android:fillColor="#4DD97746"
+        android:strokeColor="#C25E34"
+        android:strokeWidth="1"
+        android:pathData="M62,42 L74,42 L74,52 L62,52 Z" />
+
+    <!-- Layer 4: Table Grid Row -->
+    <path
+        android:fillColor="#331565C0"
+        android:strokeColor="#1565C0"
+        android:strokeWidth="1"
+        android:pathData="M62,56 L74,56 L74,66 L62,66 Z" />
+
+    <!-- Layer 5: Frame Central Core Badge -->
+    <path
+        android:fillColor="#2D5A43"
+        android:pathData="M54,44 C50,49 46,54 54,61 C62,54 58,49 54,44 Z" />
+
+    <!-- Center Lotus Petal Sparks -->
+    <path
+        android:fillColor="#FFB703"
+        android:pathData="M54,49 A3,3 0 1,1 53.9,49 Z" />
+
+</vector>

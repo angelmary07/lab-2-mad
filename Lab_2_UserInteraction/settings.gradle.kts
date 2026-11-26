@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Lab2_UserInteraction"
 include(":app")
+

@@ -1,14 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Core Brand Palette -->
     <color name="primary_moss">#2D5A43</color>
     <color name="primary_forest">#1E3A2F</color>
     <color name="primary_sage">#52796F</color>
     <color name="accent_clay">#C25E34</color>
     <color name="accent_terracotta">#D97746</color>
+    <color name="accent_amber">#F59E0B</color>
+
+    <!-- Glassmorphic Translucent Tints -->
+    <color name="glass_surface">#EBF8FAFC</color>       <!-- 92% frosted slate/white -->
+    <color name="glass_surface_subtle">#CCFFFFFF</color><!-- 80% frosted white -->
+    <color name="glass_surface_accent">#1F2D5A43</color><!-- 12% tinted moss -->
+    <color name="glass_stroke">#80FFFFFF</color>        <!-- 50% frosted border -->
+    <color name="glass_stroke_subtle">#33CBD5E1</color> <!-- 20% slate border -->
+    <color name="glass_glow">#4010B981</color>          <!-- Emerald glow -->
+
+    <!-- Ambient Aurora Mesh Background Stops -->
+    <color name="aurora_bg_start">#F0FDF4</color>       <!-- Mint cream -->
+    <color name="aurora_bg_center">#FAF7F2</color>      <!-- Warm paper -->
+    <color name="aurora_bg_end">#ECFDF5</color>         <!-- Soft sage aura -->
+
+    <!-- Base UI Colors -->
     <color name="bg_paper">#FAF7F2</color>
     <color name="bg_card">#FFFFFF</color>
-    <color name="text_ink">#1F2421</color>
-    <color name="text_secondary">#59625D</color>
-    <color name="text_muted">#8D968F</color>
-    <color name="divider_line">#E2DDD2</color>
+    <color name="text_ink">#0F172A</color>
+    <color name="text_secondary">#475569</color>
+    <color name="text_muted">#64748B</color>
+    <color name="divider_line">#E2E8F0</color>
 </resources>

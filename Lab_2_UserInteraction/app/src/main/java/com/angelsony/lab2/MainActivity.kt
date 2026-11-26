@@ -1,6 +1,8 @@
 package com.angelsony.lab2
 
 import android.os.Bundle
+import android.view.View
+import android.view.animation.DecelerateInterpolator
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -9,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 /**
  * Main Activity for Lab Exercise 2:
  * Dynamic Numerical Processing and User Interaction in Kotlin & XML.
+ * Enhanced with glassmorphic styling and staggered entrance animations.
  */
 class MainActivity : AppCompatActivity() {
 
@@ -17,6 +20,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val headerCard = findViewById<View>(R.id.headerCard)
+        val cardInputs = findViewById<View>(R.id.cardInputs)
+        val cardOperations = findViewById<View>(R.id.cardOperations)
+        val cardResult = findViewById<View>(R.id.cardResult)
 
         val etFirstValue = findViewById<EditText>(R.id.etFirstValue)
         val etSecondValue = findViewById<EditText>(R.id.etSecondValue)
@@ -53,6 +61,20 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.btnPresetWater)?.setOnClickListener {
             controller.setPresetValues("70.0", "35.0")
+        }
+
+        // Staggered Cascade Entrance Animation
+        val cards = listOf(headerCard, cardInputs, cardOperations, cardResult)
+        cards.forEachIndexed { index, view ->
+            view?.alpha = 0f
+            view?.translationY = 50f
+            view?.animate()
+                ?.alpha(1f)
+                ?.translationY(0f)
+                ?.setDuration(450)
+                ?.setStartDelay((index * 80).toLong())
+                ?.setInterpolator(DecelerateInterpolator())
+                ?.start()
         }
     }
 }

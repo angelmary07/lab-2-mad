@@ -1,6 +1,8 @@
 package com.angelsony.lab1b
 
 import android.os.Bundle
+import android.view.View
+import android.view.animation.DecelerateInterpolator
 import android.widget.ArrayAdapter
 import android.widget.CheckBox
 import android.widget.RadioButton
@@ -23,6 +25,8 @@ import com.google.android.material.materialswitch.MaterialSwitch
  * 5. CheckBox
  * 6. RadioButton
  * 7. Switch
+ *
+ * Enhanced with glassmorphism, cascade entrance animations, and dynamic live summary pulse.
  */
 class MainActivity : AppCompatActivity() {
 
@@ -39,6 +43,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var switchSos: MaterialSwitch
     private lateinit var tvLiveSummary: TextView
     private lateinit var fabQuickAction: FloatingActionButton
+    private lateinit var cardSummary: View
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -69,6 +74,7 @@ class MainActivity : AppCompatActivity() {
         switchSos = findViewById(R.id.switchSos)
 
         tvLiveSummary = findViewById(R.id.tvLiveSummary)
+        cardSummary = findViewById(R.id.cardSummary)
 
         setupSeekBar()
         setupSpinner()
@@ -78,6 +84,41 @@ class MainActivity : AppCompatActivity() {
         setupFab()
 
         updateLiveSummary()
+        playCascadeEntrance()
+    }
+
+    private fun playCascadeEntrance() {
+        val views = listOf(
+            findViewById<View>(R.id.headerCard),
+            findViewById<View>(R.id.cardSeekBar),
+            findViewById<View>(R.id.cardSpinner),
+            findViewById<View>(R.id.cardCheckBox),
+            findViewById<View>(R.id.cardRadio),
+            findViewById<View>(R.id.cardSwitch),
+            cardSummary
+        )
+
+        views.forEachIndexed { index, view ->
+            view?.alpha = 0f
+            view?.translationY = 50f
+            view?.animate()
+                ?.alpha(1f)
+                ?.translationY(0f)
+                ?.setDuration(450)
+                ?.setStartDelay((index * 70).toLong())
+                ?.setInterpolator(DecelerateInterpolator())
+                ?.start()
+        }
+
+        // FAB Entrance
+        fabQuickAction.scaleX = 0f
+        fabQuickAction.scaleY = 0f
+        fabQuickAction.animate()
+            .scaleX(1f)
+            .scaleY(1f)
+            .setDuration(400)
+            .setStartDelay(500)
+            .start()
     }
 
     private fun setupSeekBar() {
@@ -145,6 +186,14 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupFab() {
         fabQuickAction.setOnClickListener {
+            fabQuickAction.animate()
+                .scaleX(0.88f)
+                .scaleY(0.88f)
+                .setDuration(100)
+                .withEndAction {
+                    fabQuickAction.animate().scaleX(1f).scaleY(1f).setDuration(120).start()
+                }
+                .start()
             Toast.makeText(this, "FAB Clicked: Quick clinical intake submitted successfully! 🌟", Toast.LENGTH_LONG).show()
             updateLiveSummary()
         }
@@ -171,5 +220,15 @@ class MainActivity : AppCompatActivity() {
                 "✓ RadioButton: Consultation mode is $mode\n" +
                 "✓ Switches: Automated alerts are ${if (remindersOn) "Enabled" else "Partially configured"}\n" +
                 "✓ ScrollView & FAB: Fully responsive and active!"
+
+        // Subtle live animation pulse on summary card update
+        cardSummary.animate()
+            .scaleX(1.02f)
+            .scaleY(1.02f)
+            .setDuration(100)
+            .withEndAction {
+                cardSummary.animate().scaleX(1f).scaleY(1f).setDuration(100).start()
+            }
+            .start()
     }
 }
