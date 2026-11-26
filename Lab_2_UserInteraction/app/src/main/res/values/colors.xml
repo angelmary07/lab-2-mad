@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_forest">#1E3A2F</color>
+    <color name="primary_moss">#2D5A43</color>
+    <color name="primary_sage">#52796F</color>
+    <color name="accent_terracotta">#D97746</color>
+    
+    <!-- Operation Result Colors -->
+    <color name="calc_op_add">#2E7D32</color>          <!-- Emerald Green -->
+    <color name="calc_op_subtract">#1565C0</color>     <!-- Ocean Blue -->
+    <color name="calc_op_multiply">#6A1B9A</color>     <!-- Royal Purple -->
+    <color name="calc_op_divide">#D84315</color>       <!-- Deep Orange -->
+    <color name="calc_op_error">#C62828</color>        <!-- Crimson Red -->
+    <color name="calc_btn_normal">#2D5A43</color>
+    <color name="calc_btn_clicked">#FFB703</color>     <!-- Golden Amber -->
+    <color name="calc_clear_bg">#475569</color>
+
+    <color name="bg_paper">#FAF7F2</color>
+    <color name="bg_card">#FFFFFF</color>
+    <color name="text_ink">#1F2421</color>
+    <color name="text_secondary">#59625D</color>
+    <color name="text_muted">#8D968F</color>
+    <color name="divider_line">#E2DDD2</color>
+</resources>

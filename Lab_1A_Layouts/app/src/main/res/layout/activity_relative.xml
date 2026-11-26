@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- LAYOUT 3: RelativeLayout -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootRelative"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_paper"
+    android:padding="20dp">
+
+    <!-- Header relative to parent top -->
+    <TextView
+        android:id="@+id/tvBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="← Back to Hub"
+        android:textColor="@color/accent_clay"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvBadge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/accent_clay"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="3dp"
+        android:text="LAYOUT 3: RELATIVELAYOUT"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvBack"
+        android:layout_marginTop="16dp"
+        android:fontFamily="serif"
+        android:text="Mental Health Assessment"
+        android:textColor="@color/text_ink"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginTop="2dp"
+        android:text="Demonstrates relative positioning: layout_below, layout_toEndOf, and layout_alignParentBottom."
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/lblQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvSubtitle"
+        android:layout_marginTop="20dp"
+        android:text="How would you rate your emotional energy today?"
+        android:textColor="@color/text_ink"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <!-- RadioGroup relative to lblQuestion -->
+    <RadioGroup
+        android:id="@+id/rgMood"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblQuestion"
+        android:layout_marginTop="8dp">
+
+        <RadioButton
+            android:id="@+id/rbRadiant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="🤩 Radiant &amp; Energetic" />
+
+        <RadioButton
+            android:id="@+id/rbCalm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="😌 Calm &amp; Peaceful" />
+
+        <RadioButton
+            android:id="@+id/rbLow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="😔 Fatigued &amp; Low" />
+
+        <RadioButton
+            android:id="@+id/rbStressed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="😣 Anxious / High Stress" />
+    </RadioGroup>
+
+    <!-- Notes EditText relative to rgMood -->
+    <TextView
+        android:id="@+id/lblNotes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rgMood"
+        android:layout_marginTop="16dp"
+        android:text="Self-Observation Notes:"
+        android:textColor="@color/text_ink"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etNotes"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/lblNotes"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/bg_edit"
+        android:gravity="top|start"
+        android:hint="Any triggers or positive breakthroughs today?"
+        android:padding="10dp"
+        android:textColor="@color/text_ink"
+        android:textSize="13sp" />
+
+    <!-- Submit Button anchored to Parent Bottom -->
+    <Button
+        android:id="@+id/btnSaveAssessment"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/accent_clay"
+        android:text="Save Clinical Assessment" />
+
+</RelativeLayout>

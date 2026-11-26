@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Lab1A" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary_moss</item>
+        <item name="colorSecondary">@color/accent_clay</item>
+        <item name="android:colorBackground">@color/bg_paper</item>
+        <item name="colorSurface">@color/bg_card</item>
+    </style>
+</resources>

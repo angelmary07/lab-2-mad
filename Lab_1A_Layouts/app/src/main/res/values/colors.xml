@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_moss">#2D5A43</color>
+    <color name="primary_forest">#1E3A2F</color>
+    <color name="primary_sage">#52796F</color>
+    <color name="accent_clay">#C25E34</color>
+    <color name="accent_terracotta">#D97746</color>
+    <color name="bg_paper">#FAF7F2</color>
+    <color name="bg_card">#FFFFFF</color>
+    <color name="text_ink">#1F2421</color>
+    <color name="text_secondary">#59625D</color>
+    <color name="text_muted">#8D968F</color>
+    <color name="divider_line">#E2DDD2</color>
+</resources>

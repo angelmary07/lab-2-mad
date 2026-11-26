@@ -68,7 +68,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="serif"
                         android:lineSpacingMultiplier="1.15"
-                        android:text="\"Peace comes from within. Do not seek it without.\""
+                        android:text="&quot;Peace comes from within. Do not seek it without.&quot;"
                         android:textColor="@color/text_ink"
                         android:textSize="15sp"
                         android:textStyle="italic" />
